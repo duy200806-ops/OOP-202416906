@@ -1,23 +1,18 @@
 package lab2;
 
 public class DigitalVideoDisc {
-    // 1. Instance members (Thuộc tính của đối tượng)
+    // 1. Thuộc tính (Attributes)
     private String title;
     private String category;
     private String director;
     private int length;
     private float cost;
     
-    // 2. Class members & ID (Cập nhật theo phần 5)
+    // Thuộc tính dùng chung cho Class (Phần 5)
     private int id; 
     private static int nbDigitalVideoDiscs = 0; 
 
-    // 3. Setter cho title (Cập nhật theo phần 3 để TestPassingParameter không bị lỗi)
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    // 4. Các Constructor (Sử dụng 'this' để tự động tăng ID cho mọi trường hợp khởi tạo)
+    // 2. Constructors (Nạp chồng - Overloading)
     public DigitalVideoDisc(String title) {
         this.title = title;
         nbDigitalVideoDiscs++;
@@ -25,7 +20,7 @@ public class DigitalVideoDisc {
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {
-        this(title);
+        this(title); // Gọi constructor phía trên
         this.category = category;
         this.cost = cost;
     }
@@ -40,28 +35,24 @@ public class DigitalVideoDisc {
         this.length = length;
     }
 
-    // 5. Các Getter
-    public String getTitle() {
-        return title;
+    // 3. Getters & Setters
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; } // Cần cho phần 3
+    public String getCategory() { return category; }
+    public String getDirector() { return director; }
+    public int getLength() { return length; }
+    public float getCost() { return cost; }
+    public int getId() { return id; }
+
+    // 4. Các phương thức bổ trợ (Phần 6)
+    @Override
+    public String toString() {
+        return "DVD - " + title + " - " + (category != null ? category : "N/A") + 
+               " - " + (director != null ? director : "N/A") + 
+               " - " + length + ": " + cost + " $";
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public float getCost() {
-        return cost;
+    public boolean isMatch(String title) {
+        return this.title.toLowerCase().contains(title.toLowerCase());
     }
 }
