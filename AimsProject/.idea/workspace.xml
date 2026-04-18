@@ -4,156 +4,65 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b71c8ab-dc1d-44f0-bec6-79666b192b3e" name="Changes" comment="Implement the Store class" />
+    <list default="true" id="f8617c45-b067-4704-bcab-1738b942dcbb" name="Changes" comment="Re-organize projects" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/.." value="refactor/reorganize-project" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="3CTg7AibOwzfzYgwdk09sZV1ONJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="3CY0ACBbz2ZbO72abt7KHtI3CD9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/oop lab/Lab01&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/oop lab/AimsProject&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\oop lab\Lab02\src code\hust.soict.dsai.aims" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\oop lab\Lab02\src code\hust.soict.dsai.test.store" />
-      <recent name="D:\oop lab\Lab02\src code\hust.soict.dsai.test.disc" />
-      <recent name="D:\oop lab\Lab02\src code\hust.soict.dsai.test.cart" />
-      <recent name="D:\oop lab\Lab02\src code\hust.soict.dsai.aims" />
-      <recent name="D:\oop lab\Lab02\src code\hust.soict.dsai.aims.store" />
-    </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Aims Project" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Aims Project" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8b71c8ab-dc1d-44f0-bec6-79666b192b3e" name="Changes" comment="" />
-      <created>1776414804972</created>
+      <changelist id="f8617c45-b067-4704-bcab-1738b942dcbb" name="Changes" comment="" />
+      <created>1776547049241</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1776414804972</updated>
+      <updated>1776547049241</updated>
     </task>
-    <task id="LOCAL-00001" summary="Lab03: Method Overloading">
-      <created>1776418161356</created>
+    <task id="LOCAL-00001" summary="Re-organize projects">
+      <created>1776547083673</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1776418161356</updated>
+      <updated>1776547083673</updated>
     </task>
-    <task id="LOCAL-00002" summary="Lab03: Passing Parameter">
-      <created>1776536043420</created>
+    <task id="LOCAL-00002" summary="Re-organize projects">
+      <created>1776547900447</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1776536043420</updated>
+      <updated>1776547900447</updated>
     </task>
-    <task id="LOCAL-00003" summary="Classifier Member and Instance Member">
-      <created>1776537166948</created>
+    <task id="LOCAL-00003" summary="Re-organize projects">
+      <created>1776547967911</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1776537166948</updated>
+      <updated>1776547967911</updated>
     </task>
-    <task id="LOCAL-00004" summary="Open the Cart class">
-      <created>1776538127981</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1776538127981</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Implement the Store class">
-      <created>1776538881109</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1776538881109</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Implement the Store class">
-      <created>1776546004298</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1776546004298</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Lab03: Method Overloading" />
-    <MESSAGE value="Lab03: Passing Parameter" />
-    <MESSAGE value="Classifier Member and Instance Member" />
-    <MESSAGE value="Open the Cart class" />
-    <MESSAGE value="Implement the Store class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement the Store class" />
+    <MESSAGE value="Re-organize projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="Re-organize projects" />
   </component>
 </project>
