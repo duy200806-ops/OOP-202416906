@@ -1,0 +1,98 @@
+Index: src code/lab2/TestPassingParameter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lab2;\r\n\r\npublic class TestPassingParameter {\r\n\r\n    public static void main(String[] args) {\r\n        DigitalVideoDisc jungleDVD = new DigitalVideoDisc(\"Jungle\");\r\n        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc(\"Cinderella\");\r\n\r\n        swap(jungleDVD, cinderellaDVD);\r\n        System.out.println(\"jungle dvd title: \" + jungleDVD.getTitle());\r\n        System.out.println(\"cinderella dvd title: \" + cinderellaDVD.getTitle());\r\n\r\n        // Thử nghiệm hàm changeTitle (sẽ thay đổi dữ liệu bên trong đối tượng)\r\n        changeTitle(jungleDVD, cinderellaDVD.getTitle());\r\n        System.out.println(\"jungle dvd title: \" + jungleDVD.getTitle());\r\n    }\r\n\r\n\r\n    public static void swap(Object o1, Object o2) {\r\n        Object tmp = o1;\r\n        o1 = o2;\r\n        o2 = tmp;\r\n    }\r\n    public static void changeTitle(DigitalVideoDisc dvd, String title) {\r\n        String oldTitle = dvd.getTitle();\r\n        dvd.setTitle(title);\r\n\r\n        dvd = new DigitalVideoDisc(oldTitle);\r\n    }\r\n}
+===================================================================
+diff --git a/src code/lab2/TestPassingParameter.java b/src code/lab2/TestPassingParameter.java
+--- a/src code/lab2/TestPassingParameter.java	
++++ b/src code/lab2/TestPassingParameter.java	
+@@ -1,30 +1,69 @@
+ package lab2;
+ 
+-public class TestPassingParameter {
++public class DigitalVideoDisc {
++    private String title;
++    private String category;
++    private String director;
++    private int length;
++    private float cost;
++
++    // Class member (biến static, dùng chung cho tất cả đối tượng)
++    private static int nbDigitalVideoDiscs = 0;
++
++    // Instance member (mỗi đối tượng có id riêng)
++    private int id;
++
++    public DigitalVideoDisc(String title, String category, String director, int length, float cost) {
++        this.title = title;
++        this.category = category;
++        this.director = director;
++        this.length = length;
++        this.cost = cost;
++        nbDigitalVideoDiscs++;
++        this.id = nbDigitalVideoDiscs;
++    }
+ 
+-    public static void main(String[] args) {
+-        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
+-        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
++    public DigitalVideoDisc(String title, String category, String director, float cost) {
++        this.title = title;
++        this.category = category;
++        this.director = director;
++        this.cost = cost;
++        nbDigitalVideoDiscs++;
++        this.id = nbDigitalVideoDiscs;
++    }
+ 
+-        swap(jungleDVD, cinderellaDVD);
+-        System.out.println("jungle dvd title: " + jungleDVD.getTitle());
+-        System.out.println("cinderella dvd title: " + cinderellaDVD.getTitle());
++    public DigitalVideoDisc(String title, String category, float cost) {
++        this.title = title;
++        this.category = category;
++        this.cost = cost;
++        nbDigitalVideoDiscs++;
++        this.id = nbDigitalVideoDiscs;
++    }
+ 
+-        // Thử nghiệm hàm changeTitle (sẽ thay đổi dữ liệu bên trong đối tượng)
+-        changeTitle(jungleDVD, cinderellaDVD.getTitle());
+-        System.out.println("jungle dvd title: " + jungleDVD.getTitle());
++    public DigitalVideoDisc(String title) {
++        this.title = title;
++        nbDigitalVideoDiscs++;
++        this.id = nbDigitalVideoDiscs;
+     }
+ 
++    public String getTitle() { return title; }
++    public String getCategory() { return category; }
++    public String getDirector() { return director; }
++    public int getLength() { return length; }
++    public float getCost() { return cost; }
+ 
+-    public static void swap(Object o1, Object o2) {
+-        Object tmp = o1;
+-        o1 = o2;
+-        o2 = tmp;
++    // Setter cho title (dùng trong bài Passing Parameter)
++    public void setTitle(String title) {
++        this.title = title;
+     }
+-    public static void changeTitle(DigitalVideoDisc dvd, String title) {
+-        String oldTitle = dvd.getTitle();
+-        dvd.setTitle(title);
+ 
+-        dvd = new DigitalVideoDisc(oldTitle);
++
++    public int getId() {
++        return id;
+     }
+-}
+\ No newline at end of file
++
++
++    public static int getNbDigitalVideoDiscs() {
++        return nbDigitalVideoDiscs;
++    }
++}

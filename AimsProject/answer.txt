@@ -1,0 +1,12 @@
+LAB 2: 
+
+Câu 1: 	Bạn có thể tạo một hàm khởi tạo chỉ có "title" và một cái khác chỉ có "category" cho lớp DigitalVideoDisc không?
+Trả lời: Không. Cả "title" và "category" đều là kiểu String. Trong Java, các hàm khởi tạo trùng tên (overloading) phải có kiểu dữ liệu tham số khác nhau. Vì cả hai đều là String, trình biên dịch sẽ không phân biệt được là đang muốn gọi cái nào.
+
+Câu 2: Các phạm vi truy cập (access modifiers) nào được sử dụng cho thuộc tính và phương thức trong bài này?
+Trả lời: 
+Thuộc tính (biến): Dùng private để bảo mật dữ liệu và đảm bảo tính Đóng gói.
+Phương thức/Hàm khởi tạo: Dùng public để các lớp khác (như lớp Aims) có thể gọi và sử dụng.
+
+Câu 3: Phương thức xóa đĩa (removeDigitalVideoDisc) có hoạt động đúng không?
+Trả lời: Có. Kết quả ở màn hình Console cho thấy sau khi xóa, tổng tiền đã giảm từ 63.89 xuống 44.9, chứng tỏ logic xóa và tính lại tiền đã chạy đúng.
