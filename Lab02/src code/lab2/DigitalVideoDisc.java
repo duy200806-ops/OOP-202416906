@@ -1,27 +1,31 @@
 package lab2;
 
 public class DigitalVideoDisc {
-    // Thuộc tính instance (Instance members)
+    // 1. Instance members (Thuộc tính của đối tượng)
     private String title;
     private String category;
     private String director;
     private int length;
     private float cost;
+    
+    // 2. Class members & ID (Cập nhật theo phần 5)
+    private int id; 
+    private static int nbDigitalVideoDiscs = 0; 
 
-    // --- PHẦN CẬP NHẬT MỚI THEO YÊU CẦU ---
-    private int id; // Thuộc tính instance để lưu id riêng của mỗi DVD
-    private static int nbDigitalVideoDiscs = 0; // Thuộc tính class để đếm tổng số DVD đã tạo
-    // ------------------------------------
+    // 3. Setter cho title (Cập nhật theo phần 3 để TestPassingParameter không bị lỗi)
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
+    // 4. Các Constructor (Sử dụng 'this' để tự động tăng ID cho mọi trường hợp khởi tạo)
     public DigitalVideoDisc(String title) {
         this.title = title;
-        // Cập nhật id tự động mỗi khi tạo instance mới
         nbDigitalVideoDiscs++;
         this.id = nbDigitalVideoDiscs;
     }
 
     public DigitalVideoDisc(String title, String category, float cost) {
-        this(title); // Gọi constructor trên để tránh lặp code cập nhật id
+        this(title);
         this.category = category;
         this.cost = cost;
     }
@@ -36,22 +40,28 @@ public class DigitalVideoDisc {
         this.length = length;
     }
 
-    // Getter cho id và tiêu đề
-    public int getId() {
-        return id;
-    }
-
+    // 5. Các Getter
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public int getId() {
+        return id;
     }
 
-    // Các Getter khác giữ nguyên...
-    public String getCategory() { return category; }
-    public String getDirector() { return director; }
-    public int getLength() { return length; }
-    public float getCost() { return cost; }
+    public String getCategory() {
+        return category;
+    }
+
+    public String getDirector() {
+        return director;
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public float getCost() {
+        return cost;
+    }
 }
