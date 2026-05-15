@@ -7,9 +7,13 @@ public class Book extends Media {
     private List<String> authors = new ArrayList<String>();
 
     public Book() {
+        super();
     }
 
-    // Custom methods for authors
+    public Book(int id, String title, String category, float cost) {
+        super(id, title, category, cost);
+    }
+
     public void addAuthor(String authorName) {
         if (!authors.contains(authorName)) {
             authors.add(authorName);
@@ -26,5 +30,11 @@ public class Book extends Media {
         } else {
             System.out.println("Author '" + authorName + "' not found in the list.");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Book - " + getTitle() + " - " + (getCategory() != null ? getCategory() : "N/A") +
+               " - Authors: " + authors.toString() + ": " + getCost() + " $";
     }
 }
