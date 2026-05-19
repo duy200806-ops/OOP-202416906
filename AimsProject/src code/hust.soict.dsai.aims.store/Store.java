@@ -35,4 +35,14 @@ public class Store {
         }
         System.out.println("***************************************************");
     }
+
+    // Tìm Media theo tên
+    public Media searchMedia(String title) {
+        for (Media media : itemsInStore) {
+            if (media.getTitle().toLowerCase().equals(title.toLowerCase())) {
+                return media;
+            }
+        }
+        return null;
+    }
 }

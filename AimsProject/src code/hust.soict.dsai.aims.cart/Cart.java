@@ -2,6 +2,7 @@ package hust.soict.dsai.aims.cart;
 
 import hust.soict.dsai.aims.media.Media;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Cart {
     private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
@@ -69,5 +70,32 @@ public class Cart {
             }
         }
         if (!found) System.out.println("No media with title '" + title + "' was found.");
+    }
+
+    // Làm trống giỏ hàng
+    public void emptyCart() {
+        itemsOrdered.clear();
+        System.out.println("The cart has been emptied.");
+    }
+
+    // Sắp xếp theo Title rồi Cost
+    public void sortByTitleCost() {
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+        System.out.println("Cart sorted by Title then Cost.");
+    }
+
+    // Sắp xếp theo Cost rồi Title
+    public void sortByCostTitle() {
+        Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+        System.out.println("Cart sorted by Cost then Title.");
+    }
+
+    public Media searchMedia(String title) {
+        for (Media media : itemsOrdered) {
+            if (media.getTitle().toLowerCase().equals(title.toLowerCase())) {
+                return media;
+            }
+        }
+        return null;
     }
 }
