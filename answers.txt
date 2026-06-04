@@ -51,3 +51,29 @@ public int compareTo(Media other) {
     if (titleCompare != 0) return titleCompare;
     return Float.compare(other.getCost(), this.getCost());
 }
+
+LAB 5:
+
+Câu 1: Hãy so sánh các phần tử chứa hàng đầu (top-level containers) trong Swing và AWT.
+Trả lời:
+- Trong AWT: Container hàng đầu là Frame (hoặc Window, Dialog). Các thành phần con (components) được thêm trực tiếp vào Frame thông qua phương thức add() (ví dụ: add(component)).
+- Trong Swing: Container hàng đầu là JFrame (hoặc JWindow, JDialog). Các thành phần con không nên được thêm trực tiếp vào JFrame mà phải được thêm vào content-pane của nó (ví dụ: getContentPane().add(component)). (Lưu ý: từ Java 5 trở đi, phương thức add() của JFrame đã được ánh xạ tự động tới content-pane, giúp cú pháp ngắn gọn hơn nhưng bản chất bên dưới vẫn là add vào content-pane).
+- Trọng lượng (Weight): Frame của AWT là thành phần heavyweight (phụ thuộc vào giao diện hệ điều hành để vẽ), trong khi JFrame của Swing là sự kết hợp giữa heavyweight (bản thân cửa sổ hệ thống) và các thành phần con lightweight (được vẽ hoàn toàn bằng Java).
+- Đóng cửa sổ: JFrame của Swing cung cấp phương thức setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) giúp dễ dàng đóng chương trình khi đóng cửa sổ, trong khi Frame của AWT yêu cầu phải triển khai WindowListener để xử lý sự kiện đóng.
+
+Câu 2: Hãy so sánh tên lớp của các thành phần trong AWT và tên lớp tương ứng của chúng trong Swing.
+Trả lời:
+- Các lớp thành phần của AWT nằm trong gói java.awt và không có tiền tố đứng trước tên lớp. Ví dụ:
+  + Label
+  + Button
+  + TextField
+  + TextArea
+  + Checkbox
+  + Frame
+- Các lớp thành phần tương ứng của Swing nằm trong gói javax.swing và được thêm tiền tố "J" đứng trước tên lớp (hầu hết đều kế thừa từ JComponent). Ví dụ:
+  + JLabel
+  + JButton
+  + JTextField
+  + JTextArea
+  + JCheckBox
+  + JFrame

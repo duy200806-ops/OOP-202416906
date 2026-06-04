@@ -2,10 +2,16 @@ package hust.soict.dsai.aims.cart;
 
 import hust.soict.dsai.aims.media.Media;
 import java.util.ArrayList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import java.util.Collections;
 
 public class Cart {
-    private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
+
+    public ObservableList<Media> getItemsOrdered() {
+        return itemsOrdered;
+    }
 
     // Thêm Media vào giỏ hàng
     public void addMedia(Media media) {
